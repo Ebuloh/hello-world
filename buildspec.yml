@@ -14,8 +14,8 @@ phases:
     commands:
       - echo Build started on `date`
       - echo Building the Docker image...
-      - docker build -t hello-world:latest .
-      - docker tag hello-wold:latest 900472373366.dkr.ecr.us-east-1.amazonaws.com/hello-wold:latest
+      - docker pull mariadb:latest
+      - docker tag mariadb:latest 900472373366.dkr.ecr.us-east-1.amazonaws.com/hello-wold:latest
   post_build:
     commands:
       - echo Build completed on `date`
